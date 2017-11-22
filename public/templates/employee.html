@@ -1,0 +1,60 @@
+<body>
+    <div class="row">
+
+        <h1>Join Real Projects</h1>
+
+        <div ng-repeat="employee in employees| limitTo : 1">
+            <h3> Hi <strong>{{employee.username}}</strong> ! Welcome in WeConnect
+                <img class="employee-img" src="{{employee.image_url}}" />
+            </h3>
+        </div>
+
+        <br>
+  
+        <!-- <div class="newProject" ng-show="showName">{{showName}}
+            <button type="button" class="btn btn-success" ui-sref="employersAll({showAnswer:'The Project was accepted'})">Accept</button>
+            <button type="button" class="btn btn-danger" ui-sref="employersAll({showAnswer:'The Project was refused'})">Refuse</button>
+        </div> -->
+
+
+        <h1 >All Projects</h1>
+        <input type="text" ng-model="search" placeholder="Search By Project Type" />
+        <i class="fa fa-search icon" aria-hidden="true"></i>
+        <br>
+        <br>
+        <a class="navbar-employer" ui-sref="home">HOME PAGE</a>
+        <br>
+        <br>
+        <hr class="employee-hr" >
+        <div class="all-projects">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12 project text-left" ng-repeat="project in projects |filter:{type:search} track by $index">
+                        <h3>{{project.title}}
+                        </h3>
+                        <br>
+                        <span>{{project.description}}</span>
+                        <br>
+                        <br>
+                        <span>skills:</span>
+                        <button class="skils" ng-repeat="skill in project.skills track by $index">{{skill}}</button>
+                        <br>
+                        <br>
+                        <span>Type: {{project.type}}</span>
+                        <br>
+                        <br>
+                        <button class="btn btn-success" type="button" ng-click="addProject($index); showme=true" ng-hide="showme">Join The Project</button>
+                        <i ng-show="showme" class="fa fa-check fa-3x" aria-hidden="true" ng-click="showme=false"></i>
+                        <hr class="employee-hr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

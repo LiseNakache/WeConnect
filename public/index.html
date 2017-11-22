@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeConnect Hackathon</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="font-awesome\css\font-awesome.css">
+
+
+</head>
+
+<body ng-app="weConnectApp">
+
+
+    <div class="container" ng-controller="homeCtrl">
+        <div ui-view></div>
+    </div>
+
+
+    <script src="angular\angular.js"></script>
+    <script src="@uirouter\angularjs\release\angular-ui-router.js"></script>
+    <script type="text/javascript" src="ngstorage/ngStorage.js"></script>
+    <script src="js\app.js"></script>
+    <script src="js\services\employeeFact.js"></script>
+    <script src="js\services\employerFact.js"></script>
+    <script src="js\services\projectsFact.js"></script>
+    <script src="js\controllers\employerSignUpCtrl.js"></script>
+    <script src="js\controllers\employeeSignUpCtrl.js"></script>
+    <script src="js\controllers\employersCtrl.js"></script>
+    <script src="js\controllers\employeeCtrl.js"></script>
+    <script src="js/controllers/homeCtrl.js"></script>
+   
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "weconnect",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.10",
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "mongoose": "^4.12.4",
+    "ngstorage": "^0.3.11",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olinsoffer/weconnect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olinsoffer/weconnect/issues"
+  },
+  "homepage": "https://github.com/olinsoffer/weconnect#readme",
+  "description": ""
+}
