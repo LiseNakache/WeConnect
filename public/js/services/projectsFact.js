@@ -1,24 +1,31 @@
 app.factory('projectsFact', function($http) {
-  ///////////////////////////////PROJECT FUNCTIONS///////////////////////////////
+
+  //GET ALL THE PROJECTS
   let getProjects = function() {
     return $http.get('/projects')
       .then(function(response) {
         return angular.copy(response.data);
       });
   };
-  // Gets individual employee object
+
+  //ADD A PROKECT WHEN EMPLOYER CREATE A NEW ONE
+  let addProject = function(project) {
+    return $http.post('/projects', project)
+      .then(function(response) {
+        return angular.copy(response.data);
+      });
+  };
+
+
+  // Gets individual employee object -- NEXT GOAL --
   let getProject = function(id) {
     return $http.get('/project/' + id)
       .then(function(response) {
         return angular.copy(response.data);
       });
   };
-  // Edit the information of an project
 
-  // Further details below
-  /* The data param in the function expects an object with the key and value
-  of what needs to be changed according the specifications defined in the schema
-  */
+  //----NEXT GOALS ----//
   let editProject = function(data, id) {
     return $http.put('/project/' + id + '/update', data)
       .then(function(response) {
@@ -49,13 +56,7 @@ app.factory('projectsFact', function($http) {
       });
   };
   //////////////////////DEV FUNCTIONS//////////////////
-  // Adds employee to database after signup
-  let addProject = function(project) {
-    return $http.post('/projects', project)
-      .then(function(response) {
-        return angular.copy(response.data);
-      });
-  };
+  
   let emptyProjects = function() {
     return $http.delete('/projects')
     .then(function(response) {

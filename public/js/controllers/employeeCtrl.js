@@ -1,21 +1,11 @@
 app.controller('employeeCtrl', function($scope, $stateParams, $location, projectsFact, employeeFact, $rootScope) {
   $scope.projects = []
 
-  projectsFact.getProjects()
-    .then(function(projects) {
-      $scope.projects = projects;
-    })
-    .catch(function(error) {
-      console.log(error)
-    });
-
-
-
-
     // $scope.showName = $stateParams.showName
 
   $scope.employees = [];
 
+//GET THE EMPLOYEE PROFILE
   employeeFact.getEmployees()
     .then(function(employee) {
       $scope.employees = employee;
@@ -24,6 +14,19 @@ app.controller('employeeCtrl', function($scope, $stateParams, $location, project
     .catch(function(error) {
       console.log(error);
     });
+
+
+    //EMPLOYEE SEES THE NEW UPDATED PROJECTS
+  projectsFact.getProjects()
+  .then(function(projects) {
+    $scope.projects = projects;
+  })
+  .catch(function(error) {
+    console.log(error)
+  });
+
+
+
 
     //--NEXT GOAL--//
     

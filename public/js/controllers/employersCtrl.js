@@ -14,14 +14,7 @@ app.controller('employersCtrl', function ($rootScope, $scope, employerFact, $loc
     $scope.skill = "";
   };
 
-  employeeFact.getEmployees()
-    .then(function (employees) {
-      $scope.employees = employees;
-    })
-    .catch(function (error) {
-      console.log(error)
-    });
-
+//GET THE EMPLOYER PROFILE
   employerFact.getEmployers()
     .then(function (employer) {
       $scope.employers = employer;
@@ -30,7 +23,16 @@ app.controller('employersCtrl', function ($rootScope, $scope, employerFact, $loc
       console.log(error)
     });
 
-    
+//EMPLOYER CAN SEE THE EMPLOYEES WHO ARE DOING THE PROJECT
+employeeFact.getEmployees()
+.then(function (employees) {
+  $scope.employees = employees;
+})
+.catch(function (error) {
+  console.log(error)
+});
+
+//EMPLOYER ADDS A PROJECT
   $scope.addProject = function () {
     var project = {
       title: $scope.title,
