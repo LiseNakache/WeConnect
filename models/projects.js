@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const imageSchema = new Schema({
-    url: String,
-    title: String,
-    desc: String
-});
+// const imageSchema = new Schema({
+//     url: String,
+//     title: String,
+//     desc: String
+// });
 
 const projectSchema = new Schema({
     title: String,
     type: String,
-    images: [imageSchema],
+    // images: [imageSchema],
     description: String,
     // currentProjects: [String],
     // finishedProjects: [String],
