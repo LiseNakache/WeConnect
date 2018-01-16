@@ -8,4 +8,4 @@ How to open the WeConnect App ?
 1) Open the terminal and clone this repository
 2) Write **npm install**, to install all the modules
 3) Write **npm start**
-4) On google, go to **localhost:3000**
+4) On google, go to **localhost:8000**
