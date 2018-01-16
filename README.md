@@ -7,5 +7,7 @@ How to open the WeConnect App ?
 
 1) Open the terminal and clone this repository
 2) Write **npm install**, to install all the modules
-3) Write **npm start**
+3) In another terminal, go inside the file and write **mongo**
+4) In another terminal, go inside the file and write **mongod**. You should see the sentence "connection accepted from ..."
+3) In the first terminal, Write **npm start**
 4) On google, go to **localhost:8000**
